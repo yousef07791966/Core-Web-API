@@ -6,22 +6,21 @@ namespace task_19_8.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class UsersController : ControllerBase
     {
 
-        private MyDbContext _db ;
+        private MyDbContext _db;
 
-        public CategoriesController(MyDbContext db)
+        public UsersController(MyDbContext db)
         {
 
             _db = db;
         }
 
-
         [HttpGet]
         public IActionResult Get()
         {
-            var cart = _db.Categories.ToList();
+            var cart = _db.Users.ToList();
 
             return Ok(cart);
         }
@@ -30,36 +29,30 @@ namespace task_19_8.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var data = _db.Categories.Where(c => c.CategoryId == id).ToList();
+            var data = _db.Users.Where(c => c.UserId == id).ToList();
 
             return Ok(data);
         }
 
-
-        [HttpGet]
-        [Route("Category/OneCategory/{id:int:min(5)}")]
-
-        public IActionResult GetCategory(int id)
+        [HttpGet("/name/{name}")]
+        public IActionResult Get(string name)
         {
-            var data = _db.Categories.Where(c => c.CategoryId == id).ToList();
+            var data = _db.Users.Where(c => c.Username == name).ToList();
 
             return Ok(data);
         }
-
 
         [HttpDelete("{Id}")]
 
         public IActionResult delete(int Id)
         {
-            var y = _db.Categories.FirstOrDefault(c => c.CategoryId == Id);
+            var y = _db.Users.FirstOrDefault(c => c.UserId == Id);
 
-            _db.Categories.Remove(y);
+            _db.Users.Remove(y);
             _db.SaveChanges();
 
             return Ok(y);
         }
-
-
 
     }
 }
