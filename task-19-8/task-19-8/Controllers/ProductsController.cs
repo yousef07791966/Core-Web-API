@@ -132,6 +132,33 @@ namespace task_19_8.Controllers
         //    return Ok(you);
         //}
 
+        //[HttpGet(" Get One Product/ by id max value (5) {id:int:minlength(5)}")] /// force in console to update database
+
+        //public IActionResult GetProducts(int id)
+        //{
+        //    var data = _db.Products.Where(c => c.ProductId == id).ToList();
+
+        //    return Ok(data);
+        //}
+
+        //[HttpGet(" Get One Product/ by id max value (5) {id:int:regex(502)}")] /// force in console to update database
+
+        //public IActionResult GetProducts(int id)
+        //{
+        //    var data = _db.Products.Where(c => c.ProductId == id).ToList();
+
+        //    return Ok(data);
+        //}
+
+        //[HttpGet(" Get One Product/ by id max value (5) {id:int:range(10-15)}")] /// force in console to update database
+
+        //public IActionResult GetProducts(int id)
+        //{
+        //    var data = _db.Products.Where(c => c.ProductId == id).ToList();
+
+        //    return Ok(data);
+        //}
+
 
         //[HttpGet("api/Products/{name}")]
         //[HttpGet("api/Products/{id:int}")]
@@ -161,10 +188,13 @@ namespace task_19_8.Controllers
         //}
 
 
+
         //////////////////////////////////////////////////////////////////////////
-        ///
+        /// task
 
         [HttpGet]
+        [Route("Get all Products")]
+
         public IActionResult Get()
         {
             var cart = _db.Products.ToList();
@@ -172,26 +202,29 @@ namespace task_19_8.Controllers
             return Ok(cart);
         }
 
-        [HttpGet("ProductId")]
+        [HttpGet]
+        [Route("Get one Product / by {id}")]
 
-        public IActionResult Get(int ProductId)
+        public IActionResult Get([FromQuery] int id)
         {
-            var data = _db.Products.Where(c => c.ProductId == ProductId).ToList();
+            var data = _db.Products.Where(c => c.ProductId == id).ToList();
 
             return Ok(data);
         }
 
-        [HttpGet] /// force in console
-        [Route("Product/OneProduct/{id:int:max(4)}")]
+        [HttpGet(" Get One Product/ by id max value (5) {id:int:max(5)}")] /// force in console to update database
 
-        public IActionResult GetCategory(string name)
+        public IActionResult GetProducts(int id)
         {
-            var data = _db.Products.Where(c => c.ProductName == name).ToList();
+            var data = _db.Products.Where(c => c.ProductId == id).ToList();
 
             return Ok(data);
         }
 
-        [HttpDelete("{Id}")]
+
+
+        [HttpDelete]
+        [Route(" delete one Product{Id}")]
 
         public IActionResult delete(int Id)
         {

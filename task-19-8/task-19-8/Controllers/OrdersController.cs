@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using task_19_8.Models;
 
 namespace task_19_8.Controllers
@@ -16,7 +17,7 @@ namespace task_19_8.Controllers
             _db = db;
         }
 
-        [HttpGet]
+        [HttpGet("Get all Orders")]
         public IActionResult Get()
         {
             var cart = _db.Orders.ToList();
@@ -24,27 +25,38 @@ namespace task_19_8.Controllers
             return Ok(cart);
         }
 
-        [HttpGet("OrderId")]
-        public IActionResult Get(int id)
-        {
-            var d = _db.Orders.Where(c => c.OrderId == id).ToList();
 
+
+
+        [HttpGet("Get one Order / by id")]
+        public IActionResult Get([FromQuery] int id)
+
+        {
+            if (id > 0)
+            {
+                var d = _db.Orders.Where(c => c.OrderId == id).ToList();
+
+                return Ok(d);
+            }
+            return BadRequest();
+        }
+
+        [HttpGet("Get one Order / by date")]
+        public IActionResult Get([FromQuery] int year , [FromQuery] int month , [FromQuery] int day )
+        {
+
+            var y = new DateOnly(year, month, day); 
+            var d = _db.Orders.Where(c => c.OrderDate == y).ToList();
+             
             return Ok(d);
         }
 
-        //[HttpGet("OrderName")]
-        //public IActionResult Get(int id)
-        //{
-        //    var d = _db.Orders.Where(c => c.OrderDate == id).ToList();
 
-        //    return Ok(d);
-        //}
+        [HttpDelete("delete one Order ")]
 
-
-        [HttpDelete("{Id}")]
-
-        public IActionResult delete(int Id)
+        public IActionResult delete([FromQuery] int Id)
         {
+
             var y = _db.Orders.FirstOrDefault(c => c.OrderId == Id);
 
             _db.Orders.Remove(y);
