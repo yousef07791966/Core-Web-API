@@ -31,55 +31,42 @@ public partial class MyDbContext : DbContext
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B5F5FC937");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A0BE571B3AE");
 
-            entity.Property(e => e.CategoryId)
-                .ValueGeneratedNever()
-                .HasColumnName("CategoryID");
-            entity.Property(e => e.CategoryName).HasMaxLength(50);
+            entity.Property(e => e.CategoryImage).HasMaxLength(255);
+            entity.Property(e => e.CategoryName).HasMaxLength(255);
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF2DAF5AD0");
+            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BCFD38ED0B9");
 
-            entity.Property(e => e.OrderId)
-                .ValueGeneratedNever()
-                .HasColumnName("OrderID");
-            entity.Property(e => e.UserId).HasColumnName("UserID");
+            entity.Property(e => e.OrderName).HasMaxLength(255);
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Orders__UserID__3E52440B");
+                .HasConstraintName("FK__Orders__UserId__5812160E");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED3FD8775D");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6CD005288E8");
 
-            entity.Property(e => e.ProductId)
-                .ValueGeneratedNever()
-                .HasColumnName("ProductID");
-            entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
-            entity.Property(e => e.Description).HasMaxLength(50);
-            entity.Property(e => e.ProductImage).HasMaxLength(50);
-            entity.Property(e => e.ProductName).HasMaxLength(50);
+            entity.Property(e => e.ProductImage).HasMaxLength(255);
+            entity.Property(e => e.ProductName).HasMaxLength(255);
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Products__Catego__398D8EEE");
+                .HasConstraintName("FK__Products__Catego__534D60F1");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC3BB19C9C");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C18D1D2E8");
 
-            entity.Property(e => e.UserId)
-                .ValueGeneratedNever()
-                .HasColumnName("UserID");
-            entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.Password).HasMaxLength(50);
-            entity.Property(e => e.Username).HasMaxLength(50);
+            entity.Property(e => e.Email).HasMaxLength(255);
+            entity.Property(e => e.Password).HasMaxLength(255);
+            entity.Property(e => e.Username).HasMaxLength(255);
         });
 
         OnModelCreatingPartial(modelBuilder);

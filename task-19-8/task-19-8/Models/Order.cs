@@ -11,5 +11,7 @@ public partial class Order
 
     public DateOnly? OrderDate { get; set; }
 
+    public string? OrderName { get; set; }
+
     public virtual User? User { get; set; }
 }

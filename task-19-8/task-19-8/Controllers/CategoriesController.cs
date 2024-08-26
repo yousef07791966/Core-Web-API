@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using task_19_8.DTO;
 using task_19_8.Models;
 
 namespace task_19_8.Controllers
@@ -9,15 +11,62 @@ namespace task_19_8.Controllers
     public class CategoriesController : ControllerBase
     {
 
-        private MyDbContext _db ;
+
+        private MyDbContext _db;
 
         public CategoriesController(MyDbContext db)
         {
 
             _db = db;
+
         }
 
-        
+
+        //[HttpGet]
+
+        //public IActionResult GetAllData() {
+
+        //    var getData = _db.Categories.ToList();
+
+        //    return Ok();
+        //}
+
+        //[HttpGet ]
+
+        //[Route("{id:int}")]
+
+        //public IActionResult GetData( [FromQuery] int id  )
+        //{
+
+        //    var get = _db.Categories.Where(cat => cat.CategoryId == id).FirstOrDefault();
+
+        //    return Ok();
+        //}
+
+
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+
+        //    var delet = _db.Categories.FirstOrDefault();
+        //    if (delet != null)
+        //    {
+        //        _db.Categories.Remove(delet);
+        //        _db.SaveChanges();
+
+
+        //        return Ok(delet);
+        //    }
+        //    return BadRequest();
+        //}
+
+
+        //////////////////////////////////////////////////////////////
+        ///
+
+
+
+
         [HttpGet]
         [Route("Get all categories")]
         public IActionResult Get()
@@ -30,7 +79,7 @@ namespace task_19_8.Controllers
 
         [HttpGet]   //route method  attribute
         [Route(" Get one categories")]
-        public IActionResult Get( [FromQuery]  int id , [FromQuery] string name)
+        public IActionResult Get([FromQuery] int id, [FromQuery] string name)
         {
             var data = _db.Categories.Where(c => c.CategoryId == id && c.CategoryName == name).FirstOrDefault();
 
@@ -38,15 +87,15 @@ namespace task_19_8.Controllers
         }
 
 
-        
+
 
 
         [HttpGet]
         [Route("Category/OneCategory/{name}")]   // route attribute & parmiter
 
-        public IActionResult GetCategory( string name )
+        public IActionResult GetCategory(string name)
         {
-            var data = _db.Categories.Where(c => c.CategoryName == name ).FirstOrDefault();
+            var data = _db.Categories.Where(c => c.CategoryName == name).FirstOrDefault();
 
             return Ok(data);
         }
@@ -68,8 +117,61 @@ namespace task_19_8.Controllers
             }
             return BadRequest();
         }
+        ///////////////////////////////////////////
+        ///  task 3    <summary>
+       
+
+
+        [HttpPost]
+        public IActionResult Register([FromForm] categ categDto)
+        {
+            
+            var category = new Category(); /// بدي ارجع افهم 
+
+            category.CategoryName = categDto.CategoryName;
+            category.CategoryImage = categDto.CategoryImage?.FileName;
+
+            _db.Categories.Add(category);
+            _db.SaveChanges();
+
+            return Ok("تم التسجيل بنجاح.");
+        }
+
+
+        [HttpPut("{id}")]
+        public IActionResult Update([FromForm] categ categDto, int id)
+        {
+            if (categDto.CategoryImage != null)
+            {
+                var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+                if (!Directory.Exists(uploadsFolderPath))
+                {
+                    Directory.CreateDirectory(uploadsFolderPath);
+                }
+                var filePath = Path.Combine(uploadsFolderPath, categDto.CategoryImage.FileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    categDto.CategoryImage.CopyToAsync(stream);
+                }
+
+            }
+
+                var c = _db.Categories.FirstOrDefault(l => l.CategoryId == id);
+                c.CategoryName = categDto.CategoryName;
+                c.CategoryImage = categDto.CategoryImage.FileName;
+
+                _db.Categories.Update(c);
+                _db.SaveChanges();
+                return Ok();
+
+            }
+        }
+
+ }
 
 
 
-    }
-}
+
+
+
+

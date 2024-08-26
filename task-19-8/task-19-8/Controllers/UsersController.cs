@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using task_19_8.DTO;
 using task_19_8.Models;
 
 namespace task_19_8.Controllers
@@ -47,11 +48,62 @@ namespace task_19_8.Controllers
         public IActionResult delete(int Id)
         {
             var y = _db.Users.FirstOrDefault(c => c.UserId == Id);
+            if (y != null)
+            {
+                _db.Users.Remove(y);
+                _db.SaveChanges();
 
-            _db.Users.Remove(y);
+                return Ok(y);
+            }
+            return BadRequest();
+        }
+
+
+
+        //////////////////////////////////////
+        ///  task 3    <summary>
+
+
+
+        [HttpPost]
+        public IActionResult getAll([FromForm] user prouctDto)
+        {
+
+            var data = new User
+            {
+
+                Username = prouctDto.Username,
+                Password = prouctDto.Password,
+                Email = prouctDto.Email,
+
+            };
+
+            {
+                _db.Users.Add(data);
+                _db.SaveChanges();
+
+                return Ok("تم التسجيل بنجاح.");
+            }
+
+        }
+
+
+        [HttpPut("{id}")]
+        public IActionResult Update([FromForm] user proutDto, int id)
+        {
+         
+            var data = new User
+
+            {
+                Username = proutDto.Username,
+                Password = proutDto.Password,
+                Email = proutDto.Email,
+            };
+
+            _db.Users.Update(data);
             _db.SaveChanges();
+            return Ok("تم التسجيل بنجاح.");
 
-            return Ok(y);
         }
 
     }

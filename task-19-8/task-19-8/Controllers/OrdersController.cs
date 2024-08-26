@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
 using task_19_8.Models;
 
@@ -58,11 +60,17 @@ namespace task_19_8.Controllers
         {
 
             var y = _db.Orders.FirstOrDefault(c => c.OrderId == Id);
+            if (y != null)
+            {
+                _db.Orders.Remove(y);
+                _db.SaveChanges();
 
-            _db.Orders.Remove(y);
-            _db.SaveChanges();
 
-            return Ok(y);
+                return Ok(y);
+            }
+            return BadRequest();
+
         }
+       
     }
 }
