@@ -11,7 +11,7 @@ async function getAllproducts(){
 
         container.innerHTML +=   `
 
-         <div class="container mt-5">
+        <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card shadow-lg">
@@ -27,6 +27,11 @@ async function getAllproducts(){
             `
         
     });
+}
+
+function reset() {
+    localStorage.clear(); 
+
 }
 
 function store(id) {
