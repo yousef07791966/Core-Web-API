@@ -1,4 +1,3 @@
-debugger;
 const mo = localStorage.getItem("categoryId");
 
 let url = `https://localhost:44388/api/Products/  category ${mo}`;

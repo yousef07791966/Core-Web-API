@@ -135,3 +135,12 @@ C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\refint\task
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\task-19-8.pdb
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\task-19-8.genruntimeconfig.cache
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\ref\task-19-8.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Serilog.Sinks.File.dll

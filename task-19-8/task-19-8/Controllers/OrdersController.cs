@@ -12,17 +12,28 @@ namespace task_19_8.Controllers
     public class OrdersController : ControllerBase
     {
         private MyDbContext _db;
+        private readonly ILogger<OrdersController> _logger;
 
-        public OrdersController(MyDbContext db)
+
+        public OrdersController(MyDbContext db , ILogger<OrdersController> logger)
         {
 
             _db = db;
+            _logger = logger;
         }
+
+        /// <task 2>
+        /// ////////////
+        
 
         [HttpGet("Get all Orders")]
         public IActionResult Get()
         {
             var cart = _db.Orders.ToList();
+            _logger.LogInformation(" i am yousef {omar}",cart.Count);
+            _logger.LogInformation("you excuted the get product api ");
+            _logger.LogInformation($"the cont of this products are {cart.Count}");
+            _logger.LogInformation("the cont of this products are {}", cart.Count);
 
             return Ok(cart);
         }
@@ -37,6 +48,7 @@ namespace task_19_8.Controllers
             if (id > 0)
             {
                 var d = _db.Orders.Where(c => c.OrderId == id).ToList();
+                _logger.LogInformation(" hello i am battol {malik}", d.Count);
 
                 return Ok(d);
             }

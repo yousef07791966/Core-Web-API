@@ -1,0 +1,77 @@
+2024-08-29 10:40:16.814 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 10:40:16.836 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-29 10:40:16.866 +03:00 [INF] Hosting environment: Development
+2024-08-29 10:40:16.867 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-29 10:40:17.023 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 195.7154ms
+2024-08-29 10:40:17.031 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 10:40:17.031 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-29 10:40:17.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 19.551ms
+2024-08-29 10:40:17.071 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.703ms
+2024-08-29 10:40:17.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-29 10:40:17.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.2549ms
+2024-08-29 10:40:22.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - null null
+2024-08-29 10:40:22.861 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 10:40:22.873 +03:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.OrdersController (task-19-8).
+2024-08-29 10:40:23.746 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[OrderDate], [o].[OrderName], [o].[UserId]
+FROM [Orders] AS [o]
+2024-08-29 10:40:23.786 +03:00 [INF] I am Yousef 
+2024-08-29 10:40:23.789 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Order, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 10:40:23.802 +03:00 [INF] Executed action task_19_8.Controllers.OrdersController.Get (task-19-8) in 926.5627ms
+2024-08-29 10:40:23.802 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 10:40:23.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - 200 null application/json; charset=utf-8 958.3556ms
+2024-08-29 10:42:56.642 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 10:42:56.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-29 10:42:56.672 +03:00 [INF] Hosting environment: Development
+2024-08-29 10:42:56.672 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-29 10:42:56.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 182.4594ms
+2024-08-29 10:42:56.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 10:42:56.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-29 10:42:56.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.5936ms
+2024-08-29 10:42:56.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.9042ms
+2024-08-29 10:42:56.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-29 10:42:56.990 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.799ms
+2024-08-29 10:43:26.194 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - null null
+2024-08-29 10:43:26.208 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 10:43:26.219 +03:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.OrdersController (task-19-8).
+2024-08-29 10:43:26.893 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[OrderDate], [o].[OrderName], [o].[UserId]
+FROM [Orders] AS [o]
+2024-08-29 10:43:26.931 +03:00 [INF] I am Yousef , the count of the orders 5 
+2024-08-29 10:43:26.934 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Order, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 10:43:26.947 +03:00 [INF] Executed action task_19_8.Controllers.OrdersController.Get (task-19-8) in 724.9867ms
+2024-08-29 10:43:26.948 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 10:43:26.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - 200 null application/json; charset=utf-8 758.8547ms
+2024-08-29 11:16:02.114 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 11:16:02.137 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-29 11:16:02.152 +03:00 [INF] Hosting environment: Development
+2024-08-29 11:16:02.152 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-29 11:16:02.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 11:16:02.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 235.0104ms
+2024-08-29 11:16:02.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-29 11:16:02.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.9835ms
+2024-08-29 11:16:02.404 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.9958ms
+2024-08-29 11:16:02.446 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-29 11:16:02.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.842ms
+2024-08-29 11:16:08.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - null null
+2024-08-29 11:16:08.676 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 11:16:08.685 +03:00 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.OrdersController (task-19-8).
+2024-08-29 11:16:09.573 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[OrderDate], [o].[OrderName], [o].[UserId]
+FROM [Orders] AS [o]
+2024-08-29 11:16:09.614 +03:00 [INF] I am Yousef , the count of the orders 5 
+2024-08-29 11:16:09.617 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Order, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 11:16:09.631 +03:00 [INF] Executed action task_19_8.Controllers.OrdersController.Get (task-19-8) in 943.6093ms
+2024-08-29 11:16:09.631 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.OrdersController.Get (task-19-8)'
+2024-08-29 11:16:09.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Orders/Get all Orders - 200 null application/json; charset=utf-8 968.4402ms
+2024-08-29 12:21:25.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 12:21:25.176 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-29 12:21:25.198 +03:00 [INF] Hosting environment: Development
+2024-08-29 12:21:25.198 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-29 12:21:25.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 12:21:25.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-29 12:21:25.528 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 357.8399ms
+2024-08-29 12:21:25.534 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.4013ms
+2024-08-29 12:21:25.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.0792ms
+2024-08-29 12:21:25.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-29 12:21:25.780 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 143.9815ms

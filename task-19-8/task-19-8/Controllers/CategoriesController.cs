@@ -22,47 +22,56 @@ namespace task_19_8.Controllers
         }
 
 
-        //[HttpGet]
+        [HttpGet]
 
-        //public IActionResult GetAllData() {
+        public IActionResult GetAllData()
+        {
 
-        //    var getData = _db.Categories.ToList();
+           var getData = _db.Categories.ToList();
 
-        //    return Ok();
-        //}
-
-        //[HttpGet ]
-
-        //[Route("{id:int}")]
-
-        //public IActionResult GetData( [FromQuery] int id  )
-        //{
-
-        //    var get = _db.Categories.Where(cat => cat.CategoryId == id).FirstOrDefault();
-
-        //    return Ok();
-        //}
+            return Ok (getData);
+        }
 
 
-        //[HttpDelete]
-        //public IActionResult Delete(int id)
-        //{
-
-        //    var delet = _db.Categories.FirstOrDefault();
-        //    if (delet != null)
-        //    {
-        //        _db.Categories.Remove(delet);
-        //        _db.SaveChanges();
 
 
-        //        return Ok(delet);
-        //    }
-        //    return BadRequest();
-        //}
+
+
+        [HttpGet]
+
+        [Route("{id:int}")]
+
+        public IActionResult GetData([FromQuery] int id)
+        {
+
+            var get = _db.Categories.Where(cat => cat.CategoryId == id).FirstOrDefault();
+
+            return Ok();
+        }
+
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            var delet = _db.Categories.FirstOrDefault();
+            if (delet != null)
+            {
+                _db.Categories.Remove(delet);
+                _db.SaveChanges();
+
+
+                return Ok(delet);
+            }
+            return BadRequest();
+        }
+
+
 
 
         //////////////////////////////////////////////////////////////
-        ///
+        /// task 2
+        /// 
 
 
 
@@ -117,15 +126,19 @@ namespace task_19_8.Controllers
             }
             return BadRequest();
         }
+
+
+
+
         ///////////////////////////////////////////
         ///  task 3    <summary>
-       
+
 
 
         [HttpPost]
         public IActionResult Register([FromForm] categ categDto)
         {
-            
+
             var category = new Category(); /// بدي ارجع افهم 
 
             category.CategoryName = categDto.CategoryName;
@@ -156,16 +169,16 @@ namespace task_19_8.Controllers
 
             }
 
-                var c = _db.Categories.FirstOrDefault(l => l.CategoryId == id);
-                c.CategoryName = categDto.CategoryName;
-                c.CategoryImage = categDto.CategoryImage.FileName;
+            var c = _db.Categories.FirstOrDefault(l => l.CategoryId == id);
+            c.CategoryName = categDto.CategoryName;
+            c.CategoryImage = categDto.CategoryImage.FileName;
 
-                _db.Categories.Update(c);
-                _db.SaveChanges();
-                return Ok();
+            _db.Categories.Update(c);
+            _db.SaveChanges();
+            return Ok();
 
-            }
         }
+    }
 
  }
 

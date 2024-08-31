@@ -39,4 +39,9 @@ function store(id) {
 
 }
 
+debugger;
+function saveID(){
+
+    localStorage.cartId =1;
+}
 getAllproducts();

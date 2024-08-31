@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using task_19_8.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,17 @@ options.AddPolicy("Development", builder =>
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("YourConnectionString")));
+
+
+Log.Logger = new LoggerConfiguration() /// new
+    .WriteTo.Console()
+    .WriteTo.File("yousef.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
+
+
 var app = builder.Build();
 app.UseCors("Development"); /// new for conect
 

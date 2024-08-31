@@ -70,7 +70,6 @@
                 "productImage",
                 document.getElementById("productImage").files[0]
             );
-
             let response = await fetch(
                 `https://localhost:44388/api/Products/UpdateData${productId}`,
                 {
@@ -78,7 +77,6 @@
                     body: formData,
                 }
             );
-
             if (response.ok) {
                 alert("Product added successfully!");
                 // window.location.href = "index.html";
@@ -86,8 +84,6 @@
                 alert("Failed to add category. Please try again.");
             }
         });
-
-
         // Fetch the category list from the API and populate the dropdown list
         async function fetchCategories() {
             let response = await fetch(
@@ -103,7 +99,6 @@
                     categoryList.appendChild(option);
                 });
             }}
-
             fetchCategories()
     </script>
 </body>
