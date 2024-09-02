@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,28 +36,19 @@
               "RelativeDocumentMoniker": "task-19-8\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Controllers\\UsersController.cs",
               "RelativeToolTip": "task-19-8\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAcwKQAAAAAAAAA",
+              "ViewState": "AQIAALUAAAAAAAAAAAAuwMMAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T20:46:21.764Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "passwordhash.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
-              "RelativeDocumentMoniker": "task-19-8\\DTO\\passwordhash.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
-              "RelativeToolTip": "task-19-8\\DTO\\passwordhash.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T11:31:18.466Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Models\\User.cs",
               "RelativeDocumentMoniker": "task-19-8\\Models\\User.cs",
@@ -74,15 +61,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UserHashDTO.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\UserHashDTO.cs",
               "RelativeDocumentMoniker": "task-19-8\\DTO\\UserHashDTO.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\UserHashDTO.cs",
               "RelativeToolTip": "task-19-8\\DTO\\UserHashDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-01T08:18:09.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "passwordhash.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
+              "RelativeDocumentMoniker": "task-19-8\\DTO\\passwordhash.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
+              "RelativeToolTip": "task-19-8\\DTO\\passwordhash.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T11:31:18.466Z",
               "EditorCaption": ""
             }
           ]

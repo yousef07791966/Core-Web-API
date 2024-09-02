@@ -565,3 +565,844 @@ WHERE [u].[Email] = @__model_Email_0
 2024-09-02 10:34:21.658 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 1028.2671ms
 2024-09-02 10:34:21.658 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
 2024-09-02 10:34:21.665 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 200 null text/plain; charset=utf-8 1069.5453ms
+2024-09-02 16:28:54.433 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 16:28:54.504 +03:00 [INF] Hosting environment: Development
+2024-09-02 16:28:54.505 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 16:28:54.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 16:28:54.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 232.361ms
+2024-09-02 16:28:54.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 16:28:54.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 16:28:54.853 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4486ms
+2024-09-02 16:28:54.886 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.0846ms
+2024-09-02 16:28:54.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 16:28:55.019 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.2737ms
+2024-09-02 16:29:07.615 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/register - multipart/form-data; boundary=----WebKitFormBoundarySsnYi4iBJxOQAWD6 326
+2024-09-02 16:29:07.624 +03:00 [INF] CORS policy execution successful.
+2024-09-02 16:29:07.628 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 16:29:07.645 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 16:29:07.890 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Register (task-19-8) in 242.7296ms
+2024-09-02 16:29:07.890 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 16:29:07.891 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at task_19_8.DTO.passwordhash.CreatePasswordHash(String password, Byte[]& passwordHash, Byte[]& passwordSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 12
+   at task_19_8.Controllers.UsersController.Register(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 156
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 16:29:07.976 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/register - 500 null text/plain; charset=utf-8 361.2813ms
+2024-09-02 16:45:29.796 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryZjDpdKE6v0h0C9Un 326
+2024-09-02 16:45:29.799 +03:00 [INF] CORS policy execution successful.
+2024-09-02 16:45:29.799 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 16:45:29.802 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 16:45:30.906 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] IS NULL
+2024-09-02 16:45:30.917 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2024-09-02 16:45:30.918 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 1116.2012ms
+2024-09-02 16:45:30.918 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 16:45:30.922 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 401 null text/plain; charset=utf-8 1126.2927ms
+2024-09-02 17:11:11.231 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/register - multipart/form-data; boundary=----WebKitFormBoundarydZuKOXZinYo3gRPt 338
+2024-09-02 17:11:11.232 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:11.232 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 17:11:11.232 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:11.340 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Password], [PasswordHash], [PasswordSalt], [Username])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-09-02 17:11:11.354 +03:00 [INF] Executing OkObjectResult, writing value of type 'task_19_8.Models.User'.
+2024-09-02 17:11:11.364 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Register (task-19-8) in 131.2761ms
+2024-09-02 17:11:11.364 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 17:11:11.364 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/register - 200 null application/json; charset=utf-8 133.0667ms
+2024-09-02 17:11:43.769 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryJjNDO149K5fX1BwL 338
+2024-09-02 17:11:43.769 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:43.769 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:43.770 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:43.812 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:43.816 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 46.6868ms
+2024-09-02 17:11:43.817 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:43.817 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:43.819 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 49.9653ms
+2024-09-02 17:11:47.184 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryu1VrzkNT9arX4BuL 338
+2024-09-02 17:11:47.185 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:47.185 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.185 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:47.187 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:47.188 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 3.1443ms
+2024-09-02 17:11:47.188 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.189 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:47.190 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 6.1857ms
+2024-09-02 17:11:47.549 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryftxGhUW10ITXTeil 338
+2024-09-02 17:11:47.549 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:47.549 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.549 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:47.551 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:47.558 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 8.8523ms
+2024-09-02 17:11:47.558 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.558 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:47.561 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 12.6659ms
+2024-09-02 17:11:47.733 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryx1OK3865302gr0We 338
+2024-09-02 17:11:47.733 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:47.733 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.733 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:47.736 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:47.736 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 2.5437ms
+2024-09-02 17:11:47.736 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.736 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:47.738 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 5.5175ms
+2024-09-02 17:11:47.908 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryB7IPnTn3WMFmzKJG 338
+2024-09-02 17:11:47.908 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:47.908 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.908 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:47.911 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:47.912 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 3.6095ms
+2024-09-02 17:11:47.912 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:47.912 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:47.915 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 7.189ms
+2024-09-02 17:11:48.091 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundary1smyY0RIhGlsIZX1 338
+2024-09-02 17:11:48.091 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:48.091 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.091 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:48.094 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:48.094 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 2.9057ms
+2024-09-02 17:11:48.095 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.095 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:48.097 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 5.9558ms
+2024-09-02 17:11:48.281 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundarydb6gpGD0o4bdCdTw 338
+2024-09-02 17:11:48.281 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:48.281 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.282 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:48.284 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:48.284 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 2.7451ms
+2024-09-02 17:11:48.284 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.285 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:48.287 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 5.9608ms
+2024-09-02 17:11:48.455 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryi89bq5hgK4580dHq 338
+2024-09-02 17:11:48.455 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:11:48.455 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.455 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:11:48.458 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:11:48.458 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 2.8701ms
+2024-09-02 17:11:48.458 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:11:48.459 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:11:48.460 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 5.18ms
+2024-09-02 17:12:16.786 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryuGwlBCcw6NCV42zG 338
+2024-09-02 17:12:16.787 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:12:16.787 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:12:16.787 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:12:16.790 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:12:16.791 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 4.0075ms
+2024-09-02 17:12:16.791 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:12:16.791 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:12:16.792 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 6.1776ms
+2024-09-02 17:13:13.805 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundary4rZEMBQApbEyOcWn 338
+2024-09-02 17:13:13.805 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:13:13.805 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:13.805 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:13:13.809 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:13:13.810 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 4.5743ms
+2024-09-02 17:13:13.810 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:13.810 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:13:13.812 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 7.0223ms
+2024-09-02 17:13:38.691 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryJCTTtVCYBp6wH1Xx 338
+2024-09-02 17:13:38.691 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:13:38.691 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:38.691 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:13:38.695 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:13:38.696 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 4.8781ms
+2024-09-02 17:13:38.696 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:38.696 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:13:38.697 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 6.8232ms
+2024-09-02 17:13:39.229 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryD2gAKoKTHzvbv6C3 338
+2024-09-02 17:13:39.229 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:13:39.230 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:39.230 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:13:39.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:13:39.237 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 6.8847ms
+2024-09-02 17:13:39.237 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:39.237 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:13:39.241 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 11.8846ms
+2024-09-02 17:13:39.379 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryaDSCw2yJ5zsV1hs2 338
+2024-09-02 17:13:39.379 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:13:39.380 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:39.380 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:13:39.382 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:13:39.383 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 3.4792ms
+2024-09-02 17:13:39.383 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:13:39.383 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 19
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method12(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:13:39.385 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 6.303ms
+2024-09-02 17:16:17.711 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryA4BA1QbAAcwW9FW5 338
+2024-09-02 17:16:17.711 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:16:17.711 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:16:17.712 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:16:17.715 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:16:17.722 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 17:16:17.722 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 10.5293ms
+2024-09-02 17:16:17.722 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:16:17.722 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 200 null text/plain; charset=utf-8 11.4931ms
+2024-09-02 17:26:51.678 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/register - multipart/form-data; boundary=----WebKitFormBoundaryCPsg4AxrF5UmCyGm 345
+2024-09-02 17:26:51.678 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:26:51.678 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 17:26:51.678 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:26:51.693 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Password], [PasswordHash], [PasswordSalt], [Username])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-09-02 17:26:51.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'task_19_8.Models.User'.
+2024-09-02 17:26:51.695 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Register (task-19-8) in 16.1621ms
+2024-09-02 17:26:51.695 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 17:26:51.695 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/register - 200 null application/json; charset=utf-8 17.2678ms
+2024-09-02 17:27:38.017 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryeCIV2gIZa5Fp2IJs 247
+2024-09-02 17:27:38.017 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:27:38.017 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:27:38.017 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:27:38.020 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 17:27:38.020 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 17:27:38.021 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 3.0978ms
+2024-09-02 17:27:38.021 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 17:27:38.021 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 200 null text/plain; charset=utf-8 3.8623ms
+2024-09-02 17:29:28.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-09-02 17:29:28.098 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:29:28.099 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:29:28.101 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-09-02 17:29:28.108 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-09-02 17:29:28.114 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:29:28.116 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 14.6207ms
+2024-09-02 17:29:28.116 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:29:28.116 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 20.7062ms
+2024-09-02 17:30:18.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-09-02 17:30:18.659 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:30:18.659 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:30:18.660 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-09-02 17:30:18.662 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-09-02 17:30:18.663 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:30:18.663 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 3.5608ms
+2024-09-02 17:30:18.663 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:30:18.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 5.5077ms
+2024-09-02 17:30:20.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-09-02 17:30:20.041 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:30:20.041 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:30:20.041 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-09-02 17:30:20.042 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-09-02 17:30:20.043 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:30:20.043 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 2.393ms
+2024-09-02 17:30:20.043 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:30:20.044 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 3.1014ms
+2024-09-02 17:34:37.595 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 17:34:37.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 17:34:37.620 +03:00 [INF] Hosting environment: Development
+2024-09-02 17:34:37.620 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 17:34:37.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 17:34:37.757 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 17:34:37.755 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 151.5884ms
+2024-09-02 17:34:37.760 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.3884ms
+2024-09-02 17:34:37.779 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.0932ms
+2024-09-02 17:34:38.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 17:34:38.161 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.4614ms
+2024-09-02 17:35:41.529 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 17:35:41.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 17:35:41.553 +03:00 [INF] Hosting environment: Development
+2024-09-02 17:35:41.553 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 17:35:41.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 17:35:41.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 17:35:41.677 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 140.7843ms
+2024-09-02 17:35:41.683 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.9948ms
+2024-09-02 17:35:41.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.4771ms
+2024-09-02 17:35:41.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 17:35:41.961 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.8002ms
+2024-09-02 17:35:51.811 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info yousef - null null
+2024-09-02 17:35:51.818 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:35:51.827 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(System.String) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:35:52.314 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 484.3124ms
+2024-09-02 17:35:52.314 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:35:52.315 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Queries performing 'LastOrDefault' operation must have a deterministic sort order. Rewrite the query to apply an 'OrderBy' operation on the sequence before calling 'LastOrDefault'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateLastOrDefault(ShapedQueryExpression source, LambdaExpression predicate, Type returnType, Boolean returnDefault)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at task_19_8.Controllers.UsersController.ReturnInfo(String name) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 196
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:35:52.335 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info yousef - 500 null text/plain; charset=utf-8 523.1114ms
+2024-09-02 17:36:44.024 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info you - null null
+2024-09-02 17:36:44.031 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:36:44.032 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(System.String) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:36:44.047 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 15.0639ms
+2024-09-02 17:36:44.047 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:36:44.047 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Queries performing 'LastOrDefault' operation must have a deterministic sort order. Rewrite the query to apply an 'OrderBy' operation on the sequence before calling 'LastOrDefault'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateLastOrDefault(ShapedQueryExpression source, LambdaExpression predicate, Type returnType, Boolean returnDefault)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at task_19_8.Controllers.UsersController.ReturnInfo(String name) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 196
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 17:36:44.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info you - 500 null text/plain; charset=utf-8 25.3466ms
+2024-09-02 17:36:58.243 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 17:36:58.251 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 17:36:58.267 +03:00 [INF] Hosting environment: Development
+2024-09-02 17:36:58.267 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 17:36:58.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 17:36:58.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 17:36:58.387 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 137.3272ms
+2024-09-02 17:36:58.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.8499ms
+2024-09-02 17:36:58.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.3837ms
+2024-09-02 17:36:58.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 17:36:58.746 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.2095ms
+2024-09-02 17:38:42.547 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 17:38:42.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 17:38:42.573 +03:00 [INF] Hosting environment: Development
+2024-09-02 17:38:42.574 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 17:38:42.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 144.6871ms
+2024-09-02 17:38:42.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 17:38:42.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 17:38:42.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.9681ms
+2024-09-02 17:38:42.725 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8711ms
+2024-09-02 17:38:42.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 17:38:42.963 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 142.502ms
+2024-09-02 17:38:55.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/infoyou - null null
+2024-09-02 17:38:55.227 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:38:55.238 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(System.String) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:38:55.943 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__name_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__name_0
+2024-09-02 17:38:55.989 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:38:56.000 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 759.9869ms
+2024-09-02 17:38:56.000 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:38:56.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/infoyou - 200 null application/json; charset=utf-8 789.3031ms
+2024-09-02 17:45:20.030 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info1 - null null
+2024-09-02 17:45:20.033 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:45:20.034 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:45:20.034 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(System.String) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:45:20.053 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__name_0
+2024-09-02 17:45:20.054 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:45:20.054 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 19.8623ms
+2024-09-02 17:45:20.054 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:45:20.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info1 - 200 null application/json; charset=utf-8 24.3486ms
+2024-09-02 17:45:30.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info - null null
+2024-09-02 17:45:30.587 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:45:30.588 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info - 404 null null 2.253ms
+2024-09-02 17:45:30.589 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44388/api/Users/return/info, Response status code: 404
+2024-09-02 17:46:01.425 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 17:46:01.434 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 17:46:01.450 +03:00 [INF] Hosting environment: Development
+2024-09-02 17:46:01.450 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 17:46:01.579 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 17:46:01.579 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 17:46:01.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 143.9404ms
+2024-09-02 17:46:01.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.7509ms
+2024-09-02 17:46:01.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.0303ms
+2024-09-02 17:46:01.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 17:46:01.720 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.8337ms
+2024-09-02 17:46:22.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info16 - null null
+2024-09-02 17:46:22.625 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:46:22.635 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(Int32) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:46:23.367 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0
+2024-09-02 17:46:23.408 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:46:23.422 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 784.5177ms
+2024-09-02 17:46:23.422 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:46:23.427 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info16 - 200 null application/json; charset=utf-8 809.1778ms
+2024-09-02 17:46:56.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info16 - null null
+2024-09-02 17:46:56.529 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:46:56.530 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:46:56.530 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(Int32) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:46:56.548 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0
+2024-09-02 17:46:56.548 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:46:56.549 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 18.987ms
+2024-09-02 17:46:56.549 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:46:56.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info16 - 200 null application/json; charset=utf-8 23.257ms
+2024-09-02 17:48:40.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-09-02 17:48:40.665 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:48:40.665 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:48:40.670 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-09-02 17:48:40.717 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-09-02 17:48:40.722 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:48:40.723 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 52.9749ms
+2024-09-02 17:48:40.723 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-09-02 17:48:40.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 59.2065ms
+2024-09-02 17:48:59.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info15 - null null
+2024-09-02 17:48:59.525 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:48:59.525 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:48:59.525 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(Int32) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:48:59.527 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0
+2024-09-02 17:48:59.528 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:48:59.528 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 2.5968ms
+2024-09-02 17:48:59.528 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:48:59.528 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info15 - 200 null application/json; charset=utf-8 3.4804ms
+2024-09-02 17:49:02.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Users/return/info16 - null null
+2024-09-02 17:49:02.740 +03:00 [INF] CORS policy execution successful.
+2024-09-02 17:49:02.740 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:49:02.740 +03:00 [INF] Route matched with {action = "ReturnInfo", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReturnInfo(Int32) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 17:49:02.742 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0
+2024-09-02 17:49:02.742 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.User, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 17:49:02.742 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.ReturnInfo (task-19-8) in 2.2062ms
+2024-09-02 17:49:02.742 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.ReturnInfo (task-19-8)'
+2024-09-02 17:49:02.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Users/return/info16 - 200 null application/json; charset=utf-8 3.3405ms

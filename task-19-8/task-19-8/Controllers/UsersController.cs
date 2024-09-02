@@ -145,13 +145,19 @@ namespace task_19_8.Controllers
         /// <summary>
         /// ////////////////
         /// </summary>
-        /// <param =login & register></param>
+        /// <param =login & register> task also</param>
         /// <returns></returns>
 
 
         [HttpPost("register")]
         public IActionResult Register([FromForm] UserHashDTO model)
         {
+            if (model.Password == model.ConfirmPassword)
+            {
+                return BadRequest();
+            }
+
+
             byte[] passwordHash, passwordSalt;
             passwordhash.CreatePasswordHash(model.Password, out passwordHash, out passwordSalt);
             User user = new User
@@ -164,7 +170,7 @@ namespace task_19_8.Controllers
             };
 
             _db.Users.Add(user);
-             _db.SaveChanges();
+            _db.SaveChanges();
             //For Demo Purpose we are returning the PasswordHash and PasswordSalt
             return Ok(user);
         }
@@ -172,7 +178,7 @@ namespace task_19_8.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromForm] UserHashDTO model)
         {
-            var user =  _db.Users.FirstOrDefault(x => x.Email == model.Email);
+            var user = _db.Users.FirstOrDefault(x => x.Email == model.Email);
             if (user == null || !passwordhash.VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
             {
                 return Unauthorized("Invalid username or password.");
@@ -181,6 +187,16 @@ namespace task_19_8.Controllers
             return Ok("User logged in successfully");
         }
 
+
+
+        [HttpGet("return/info{id}")]
+
+        public IActionResult ReturnInfo(int id ) {
+
+            var user = _db.Users.Where(u => u.UserId == id).ToList();
+
+            return Ok(user);
+        }
 
 
     }
