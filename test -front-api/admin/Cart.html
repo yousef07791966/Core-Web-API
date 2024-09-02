@@ -46,13 +46,13 @@
                 <tr>
                     <td scope="row">${element.cartId}</td>
                     <td>${element.product.productName}</td>
-                    <td> <input type="number" value="${element.quantity}"> </td>
+                    <td> <input type="number" value="${element.quantity}" id="inputo${element.cartItemId}"> </td>
 
                             <td>
-                <button class="btn btn-primary" onclick="Update" type="button">Edit</button>
+                <button class="btn btn-primary" onclick="Updatefunction(${element.cartItemId})" type="button">Edit</button>
             </td>
             <td>
-                <button class="btn btn-primary" onclick="delete" type="button">Delete</button>
+                <button class="btn btn-primary" onclick="deletefunction(${element.cartItemId})" type="button">Delete</button>
                 
             </td>
                 </tr>`;
@@ -85,29 +85,37 @@
           }
 
 /////////
-<!-- data.forEach((item) => {
-    cardContainer.innerHTML += 
-      <tr>
-          <td>${item.cartId}</td>
-          <td>${item.product.productName}</td>
-          <td><input id="quantity-${item.cartItemId}" type="number" placeholder="${item.quantity}" class="form-input"></td>
-          <td><button type="button" onclick="updateQuantity(${item.cartItemId})">Edit</button></td>
-          <td><button type="button">Delete</button></td>
-      </tr>
-    ;
-  }); -->
-
-  async function deleteItem(CartItemID) {
-    let url = https://localhost:44333/api/Cart/deleteItemInCart/${CartItemID};
-  
-    fetch(url, {
-      method: "DELETE",
-    });
-  
-    location.reload();
-  }
+async function deletefunction(cartItemId){
+  const url = `https://localhost:44388/api/CartItems/delete/one/${cartItemId}`;
+  event.preventDefault();
+  let response = await fetch(url, {
+    method: "DELETE",
+  });
+  var data = response.json();
+  window.alert("success");
 
 
+}
+debugger;
+async function Updatefunction(cartItemId){
+  const url = `https://localhost:44388/api/CartItems/update/quantity/${cartItemId}`
+  event.preventDefault();
+  debugger;
+  var quantity = document.getElementById(`inputo${cartItemId}`).value;
+  let response = await fetch(url, {
+    method: "PUT",
+    body :JSON.stringify({
+      Quantity : quantity
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+
+  });
+const updated= await response.json();
+document.getElementById("inputo").textContent = updated.quantity;
+alert("success");
+}
 
 
     </script>

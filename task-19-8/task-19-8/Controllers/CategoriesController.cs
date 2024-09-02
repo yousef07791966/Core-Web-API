@@ -34,6 +34,16 @@ namespace task_19_8.Controllers
 
 
 
+        [HttpGet("sort")]
+        public IActionResult GetLast5Sorted()
+        {
+            var last5TableNames = _db.Categories
+                                     .OrderByDescending(t => t.CategoryName).ToList()
+                                     .TakeLast(5);
+                                     
+
+            return Ok(last5TableNames);
+        }
 
 
 
@@ -178,6 +188,12 @@ namespace task_19_8.Controllers
             return Ok();
 
         }
+
+
+    
+
+
+
     }
 
  }

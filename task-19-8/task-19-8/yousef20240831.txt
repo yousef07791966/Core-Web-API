@@ -3065,3 +3065,100 @@ LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
 2024-08-31 16:36:57.283 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1.7714ms
 2024-08-31 16:36:57.283 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
 2024-08-31 16:36:57.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 2.2442ms
+2024-08-31 22:42:58.438 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 22:42:58.525 +03:00 [INF] Hosting environment: Development
+2024-08-31 22:42:58.527 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-31 22:42:58.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-31 22:42:59.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 22:42:59.034 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-31 22:42:59.035 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 361.1232ms
+2024-08-31 22:42:59.039 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.7059ms
+2024-08-31 22:42:59.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.0385ms
+2024-08-31 22:42:59.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-31 22:42:59.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 138.4372ms
+2024-08-31 22:43:04.758 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems?id=2 - null null
+2024-08-31 22:43:04.770 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllData (task-19-8)'
+2024-08-31 22:43:04.786 +03:00 [INF] Route matched with {action = "GetAllData", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllData(Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-08-31 22:43:07.044 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+WHERE [c].[CartID] = @__id_0
+2024-08-31 22:43:07.067 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:43:07.082 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllData (task-19-8) in 2293.9562ms
+2024-08-31 22:43:07.083 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllData (task-19-8)'
+2024-08-31 22:43:07.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems?id=2 - 200 null application/json; charset=utf-8 2333.8383ms
+2024-08-31 22:49:40.604 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 22:49:40.616 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-08-31 22:49:40.634 +03:00 [INF] Hosting environment: Development
+2024-08-31 22:49:40.636 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-08-31 22:49:40.823 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 22:49:40.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 205.3001ms
+2024-08-31 22:49:40.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-08-31 22:49:40.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.1286ms
+2024-08-31 22:49:40.859 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.1374ms
+2024-08-31 22:49:40.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-08-31 22:49:41.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.3368ms
+2024-08-31 22:53:24.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories - null null
+2024-08-31 22:53:24.479 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.GetAllData (task-19-8)'
+2024-08-31 22:53:24.497 +03:00 [INF] Route matched with {action = "GetAllData", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllData() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-08-31 22:53:25.667 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-08-31 22:53:25.745 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:53:25.767 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.GetAllData (task-19-8) in 1262.9838ms
+2024-08-31 22:53:25.767 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.GetAllData (task-19-8)'
+2024-08-31 22:53:25.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories - 200 null application/json; charset=utf-8 1309.2391ms
+2024-08-31 22:54:15.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-08-31 22:54:15.070 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:15.072 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-08-31 22:54:15.075 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-08-31 22:54:15.111 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-08-31 22:54:15.112 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:54:15.113 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 37.7183ms
+2024-08-31 22:54:15.113 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-08-31 22:54:15.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 49.3272ms
+2024-08-31 22:54:17.402 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - null null
+2024-08-31 22:54:17.404 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:17.405 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-08-31 22:54:17.405 +03:00 [INF] Route matched with {action = "Get", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller task_19_8.Controllers.CategoriesController (task-19-8).
+2024-08-31 22:54:17.477 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-08-31 22:54:17.478 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Category, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:54:17.479 +03:00 [INF] Executed action task_19_8.Controllers.CategoriesController.Get (task-19-8) in 74.2121ms
+2024-08-31 22:54:17.479 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CategoriesController.Get (task-19-8)'
+2024-08-31 22:54:17.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Categories/Get all categories - 200 null application/json; charset=utf-8 77.3174ms
+2024-08-31 22:54:41.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Products/  category 6 - null null
+2024-08-31 22:54:41.219 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:41.220 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.ProductsController.GetAll (task-19-8)'
+2024-08-31 22:54:41.229 +03:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(Int32) on controller task_19_8.Controllers.ProductsController (task-19-8).
+2024-08-31 22:54:41.344 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CategoryId], [p].[Description], [p].[Price], [p].[ProductImage], [p].[ProductName]
+FROM [Products] AS [p]
+WHERE [p].[CategoryId] = @__id_0
+2024-08-31 22:54:41.358 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Product, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:54:41.360 +03:00 [INF] Executed action task_19_8.Controllers.ProductsController.GetAll (task-19-8) in 130.943ms
+2024-08-31 22:54:41.360 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.ProductsController.GetAll (task-19-8)'
+2024-08-31 22:54:41.360 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Products/  category 6 - 200 null application/json; charset=utf-8 142.4278ms
+2024-08-31 22:54:46.285 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/Products/Get one Product / by 11 - null null
+2024-08-31 22:54:46.288 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:46.288 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.ProductsController.GetOne (task-19-8)'
+2024-08-31 22:54:46.292 +03:00 [INF] Route matched with {action = "GetOne", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOne(Int32) on controller task_19_8.Controllers.ProductsController (task-19-8).
+2024-08-31 22:54:46.314 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CategoryId], [p].[Description], [p].[Price], [p].[ProductImage], [p].[ProductName]
+FROM [Products] AS [p]
+WHERE [p].[ProductId] = @__id_0
+2024-08-31 22:54:46.315 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.Models.Product, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-31 22:54:46.316 +03:00 [INF] Executed action task_19_8.Controllers.ProductsController.GetOne (task-19-8) in 23.6179ms
+2024-08-31 22:54:46.316 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.ProductsController.GetOne (task-19-8)'
+2024-08-31 22:54:46.316 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/Products/Get one Product / by 11 - 200 null application/json; charset=utf-8 31.3631ms
+2024-08-31 22:54:51.232 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/postData - null null
+2024-08-31 22:54:51.233 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:51.235 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/postData - 204 null null 2.5681ms
+2024-08-31 22:54:51.239 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/CartItems/postData - application/json 44
+2024-08-31 22:54:51.241 +03:00 [INF] CORS policy execution successful.
+2024-08-31 22:54:51.242 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/CartItems/postData - 404 null null 3.0971ms
+2024-08-31 22:54:51.243 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:44388/api/CartItems/postData, Response status code: 404

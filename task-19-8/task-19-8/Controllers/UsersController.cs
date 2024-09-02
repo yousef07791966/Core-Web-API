@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using task_19_8.DTO;
 using task_19_8.Models;
 
@@ -22,10 +22,10 @@ namespace task_19_8.Controllers
 
         /// //////////////////////
         ///   </task 2>
-      
 
-        [HttpGet ("Get all users")]
-        [ProducesResponseType(200, Type = typeof(productDTO) )]
+
+        [HttpGet("Get all users")]
+        [ProducesResponseType(200, Type = typeof(productDTO))]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(500)]
@@ -107,23 +107,24 @@ namespace task_19_8.Controllers
 
 
             var us = _db.Users.FirstOrDefault(x => x.UserId == id);
-            if (us != null) {
-            
+            if (us != null)
+            {
+
 
                 us.Username = UsertDto.Username;
                 us.Password = UsertDto.Password;
                 us.Email = UsertDto.Email;
             }
 
-                _db.Users.Update(us);
-                _db.SaveChanges();
-                return Ok("تم التسجيل بنجاح.");
+            _db.Users.Update(us);
+            _db.SaveChanges();
+            return Ok("تم التسجيل بنجاح.");
 
         }
 
         /// /////////////
         ///  test 
-       
+
         [HttpGet("CheckNumbers")]
         public IActionResult CheckNumbers(int num1, int num2)
         {
@@ -140,6 +141,47 @@ namespace task_19_8.Controllers
 
             return Ok(result);
         }
+
+        /// <summary>
+        /// ////////////////
+        /// </summary>
+        /// <param =login & register></param>
+        /// <returns></returns>
+
+
+        [HttpPost("register")]
+        public IActionResult Register([FromForm] UserHashDTO model)
+        {
+            byte[] passwordHash, passwordSalt;
+            passwordhash.CreatePasswordHash(model.Password, out passwordHash, out passwordSalt);
+            User user = new User
+            {
+                Username = model.Username,
+                Email = model.Email,
+                Password = model.Password,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt
+            };
+
+            _db.Users.Add(user);
+             _db.SaveChanges();
+            //For Demo Purpose we are returning the PasswordHash and PasswordSalt
+            return Ok(user);
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromForm] UserHashDTO model)
+        {
+            var user =  _db.Users.FirstOrDefault(x => x.Email == model.Email);
+            if (user == null || !passwordhash.VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
+            {
+                return Unauthorized("Invalid username or password.");
+            }
+            // Generate a token or return a success response
+            return Ok("User logged in successfully");
+        }
+
+
 
     }
 }

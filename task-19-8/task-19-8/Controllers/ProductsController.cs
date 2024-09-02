@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using task_19_8.DTO;
 using task_19_8.Models;
 
@@ -16,7 +17,7 @@ namespace task_19_8.Controllers
         public ProductsController(MyDbContext db)
         {
 
-            _db = db;   
+            _db = db;
         }
 
 

@@ -1,0 +1,567 @@
+2024-09-02 09:32:06.521 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 09:32:06.563 +03:00 [INF] CORS policy execution successful.
+2024-09-02 09:32:06.563 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 42.2357ms
+2024-09-02 09:32:06.566 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 09:32:06.566 +03:00 [INF] CORS policy execution successful.
+2024-09-02 09:32:06.566 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:06.566 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 09:32:06.575 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 09:32:06.578 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 09:32:06.579 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 09:32:06.579 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 12.8122ms
+2024-09-02 09:32:06.579 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:06.579 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 13.37ms
+2024-09-02 09:32:07.133 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 09:32:07.133 +03:00 [INF] CORS policy execution successful.
+2024-09-02 09:32:07.133 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.133 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 09:32:07.134 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 09:32:07.135 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 09:32:07.135 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 09:32:07.135 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 2.3879ms
+2024-09-02 09:32:07.135 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.135 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 2.7647ms
+2024-09-02 09:32:07.292 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 09:32:07.292 +03:00 [INF] CORS policy execution successful.
+2024-09-02 09:32:07.292 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.293 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 09:32:07.294 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 09:32:07.295 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 09:32:07.295 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 09:32:07.295 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 2.4815ms
+2024-09-02 09:32:07.295 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.295 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 2.8994ms
+2024-09-02 09:32:07.444 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 09:32:07.444 +03:00 [INF] CORS policy execution successful.
+2024-09-02 09:32:07.445 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.445 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 09:32:07.446 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 09:32:07.447 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 09:32:07.447 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 09:32:07.448 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 3.005ms
+2024-09-02 09:32:07.448 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 09:32:07.448 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 3.3728ms
+2024-09-02 10:08:01.282 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:08:01.372 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:08:01.374 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:08:01.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:08:01.883 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:08:01.883 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:08:01.884 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 352.2159ms
+2024-09-02 10:08:01.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.3131ms
+2024-09-02 10:08:01.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.4366ms
+2024-09-02 10:08:01.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:08:02.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.272ms
+2024-09-02 10:08:08.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:08.187 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:08.192 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:08.203 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:08.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:08.341 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:08.342 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:08.342 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:08.500 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:08.501 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:08.501 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:08.501 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:08.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:08.629 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:08.629 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:08.630 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:08.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:08.784 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:08.786 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:08.787 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:08.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:09.002 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:09.030 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:09.031 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.123 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1963.0725ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1664.7839ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1379.5373ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1132.0671ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1823.8227ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1536.4078ms
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.167 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 499 null application/json; charset=utf-8 1548.2237ms
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 499 null application/json; charset=utf-8 1677.054ms
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 499 null application/json; charset=utf-8 1995.6316ms
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 499 null application/json; charset=utf-8 1397.7298ms
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 1180.1408ms
+2024-09-02 10:08:10.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 499 null application/json; charset=utf-8 1838.624ms
+2024-09-02 10:08:16.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:16.622 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:16.623 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:16.623 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:16.668 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:16.669 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:16.669 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 45.9568ms
+2024-09-02 10:08:16.669 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:16.670 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 48.3138ms
+2024-09-02 10:08:20.625 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:08:20.626 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:20.627 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 2.1303ms
+2024-09-02 10:08:20.629 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:08:20.630 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:20.630 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:08:20.636 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:20.715 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 10:08:20.820 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 10:08:20.825 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 10:08:20.826 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 190.5875ms
+2024-09-02 10:08:20.826 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:08:20.827 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 197.2847ms
+2024-09-02 10:08:35.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:35.890 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:35.890 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:35.890 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:35.893 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:35.894 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:35.895 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 4.6256ms
+2024-09-02 10:08:35.895 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:35.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 6.2765ms
+2024-09-02 10:08:39.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:08:39.244 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:08:39.244 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:39.244 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:08:39.247 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:08:39.247 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:08:39.248 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 3.861ms
+2024-09-02 10:08:39.248 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:08:39.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 5.1728ms
+2024-09-02 10:09:07.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:09:07.021 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:07.021 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:07.021 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:09:07.023 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:09:07.024 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:09:07.025 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 3.6356ms
+2024-09-02 10:09:07.025 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:07.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 4.5836ms
+2024-09-02 10:09:08.690 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:09:08.690 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:08.690 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:08.690 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:09:08.693 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:09:08.693 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:09:08.694 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 3.9972ms
+2024-09-02 10:09:08.694 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:08.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 5.0634ms
+2024-09-02 10:09:14.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:09:14.011 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:14.012 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:14.012 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:09:14.014 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:09:14.014 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:09:14.015 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 3.4272ms
+2024-09-02 10:09:14.015 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:14.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 4.4393ms
+2024-09-02 10:09:25.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:09:25.851 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:25.851 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:25.851 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:09:25.854 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:09:25.855 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:09:25.856 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 4.2225ms
+2024-09-02 10:09:25.856 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:09:25.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 5.8779ms
+2024-09-02 10:09:43.020 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:09:43.021 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:43.021 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 1.2736ms
+2024-09-02 10:09:43.023 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:09:43.024 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:09:43.024 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:09:43.024 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:10:22.215 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:10:22.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:10:22.252 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:10:22.253 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:10:22.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:10:22.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:10:22.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 263.5246ms
+2024-09-02 10:10:22.500 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.9488ms
+2024-09-02 10:10:22.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8995ms
+2024-09-02 10:10:22.584 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:10:22.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 130.8266ms
+2024-09-02 10:10:39.071 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:10:39.079 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:10:39.086 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:10:39.096 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:10:40.203 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:10:40.220 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:10:40.230 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1130.6881ms
+2024-09-02 10:10:40.230 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:10:40.238 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 1166.1756ms
+2024-09-02 10:10:50.773 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:10:50.775 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:10:50.777 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 3.6529ms
+2024-09-02 10:10:50.779 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:10:50.780 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:10:50.781 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:10:50.794 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:11:16.488 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:11:16.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:11:16.527 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:11:16.528 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:11:16.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:11:16.737 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 234.4911ms
+2024-09-02 10:11:16.745 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:11:16.750 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 8.7011ms
+2024-09-02 10:11:16.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.3745ms
+2024-09-02 10:11:16.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:11:16.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.1374ms
+2024-09-02 10:11:56.799 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:11:56.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:11:56.843 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:11:56.844 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:11:57.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:11:57.072 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:11:57.072 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 253.799ms
+2024-09-02 10:11:57.081 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 8.5385ms
+2024-09-02 10:11:57.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9812ms
+2024-09-02 10:11:57.148 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:11:57.264 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.2996ms
+2024-09-02 10:12:02.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:12:02.443 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:12:02.452 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:12:02.470 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:12:03.727 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:12:03.745 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:12:03.758 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1284.1434ms
+2024-09-02 10:12:03.758 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:12:03.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 1339.9462ms
+2024-09-02 10:12:11.942 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:12:11.945 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:12:11.946 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 4.6114ms
+2024-09-02 10:12:11.949 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:12:11.950 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:12:11.950 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:12:11.962 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:12:52.205 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:12:52.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:12:52.247 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:12:52.248 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:12:52.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:12:52.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:12:52.477 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 254.8475ms
+2024-09-02 10:12:52.481 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7623ms
+2024-09-02 10:12:52.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.2071ms
+2024-09-02 10:12:52.559 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:12:52.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.6335ms
+2024-09-02 10:13:00.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:13:00.952 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:00.958 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:00.967 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:13:02.063 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:13:02.079 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:13:02.087 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 1117.5454ms
+2024-09-02 10:13:02.088 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:02.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 1150.3246ms
+2024-09-02 10:13:23.075 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:13:23.078 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:23.079 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 4.0507ms
+2024-09-02 10:13:23.082 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:13:23.082 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:23.083 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:13:23.092 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:13:23.208 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 10:13:23.324 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 10:13:23.330 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 10:13:23.331 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 238.819ms
+2024-09-02 10:13:23.331 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:13:23.332 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 250.3526ms
+2024-09-02 10:13:25.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:13:25.527 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:25.527 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:25.528 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:13:25.573 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:13:25.574 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:13:25.575 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 47.2804ms
+2024-09-02 10:13:25.575 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:25.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 49.4545ms
+2024-09-02 10:13:34.136 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - null null
+2024-09-02 10:13:34.137 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:34.137 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44388/api/CartItems/update/quantity/1022 - 204 null null 1.4902ms
+2024-09-02 10:13:34.145 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - application/json 16
+2024-09-02 10:13:34.146 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:34.146 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:13:34.146 +03:00 [INF] Route matched with {action = "Update", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(task_19_8.DTO.QuantityDTO, Int32) on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:13:34.152 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CartItemID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[CartItemID] = @__p_0
+2024-09-02 10:13:34.172 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [CartItems] SET [CartID] = @p0, [ProductID] = @p1, [Quantity] = @p2
+OUTPUT 1
+WHERE [CartItemID] = @p3;
+2024-09-02 10:13:34.173 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 10:13:34.175 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.Update (task-19-8) in 28.3883ms
+2024-09-02 10:13:34.175 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.Update (task-19-8)'
+2024-09-02 10:13:34.175 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44388/api/CartItems/update/quantity/1022 - 200 null text/plain; charset=utf-8 29.7179ms
+2024-09-02 10:13:36.209 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - null null
+2024-09-02 10:13:36.210 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:13:36.210 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:36.210 +03:00 [INF] Route matched with {action = "GetAllCarts", controller = "CartItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCarts() on controller task_19_8.Controllers.CartItemsController (task-19-8).
+2024-09-02 10:13:36.214 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartID] AS [CartId], [c].[CartItemID] AS [CartItemId], [c].[Quantity], [p].[ProductId], [p].[Price], [p].[ProductName], [p].[Description]
+FROM [CartItems] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ProductId]
+2024-09-02 10:13:36.214 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[task_19_8.DTO.cateItemResponseDTO, task-19-8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-02 10:13:36.216 +03:00 [INF] Executed action task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8) in 5.2895ms
+2024-09-02 10:13:36.216 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.CartItemsController.GetAllCarts (task-19-8)'
+2024-09-02 10:13:36.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/api/CartItems/get/all/cart - 200 null application/json; charset=utf-8 7.2149ms
+2024-09-02 10:15:36.824 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/register - multipart/form-data; boundary=----WebKitFormBoundaryrB7cnaxE8g7cXX9W 346
+2024-09-02 10:15:36.829 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:15:36.831 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 10:15:36.837 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:15:36.909 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Password], [PasswordHash], [PasswordSalt], [Username])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-09-02 10:15:36.923 +03:00 [INF] Executing OkObjectResult, writing value of type 'task_19_8.Models.User'.
+2024-09-02 10:15:36.936 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Register (task-19-8) in 98.5746ms
+2024-09-02 10:15:36.936 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 10:15:36.937 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/register - 200 null application/json; charset=utf-8 112.6461ms
+2024-09-02 10:15:48.759 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/register - multipart/form-data; boundary=----WebKitFormBoundary4xFmpipAj67Vr50H 346
+2024-09-02 10:15:48.760 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:15:48.761 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 10:15:48.761 +03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:15:48.786 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Password], [PasswordHash], [PasswordSalt], [Username])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-09-02 10:15:48.786 +03:00 [INF] Executing OkObjectResult, writing value of type 'task_19_8.Models.User'.
+2024-09-02 10:15:48.787 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Register (task-19-8) in 26.2718ms
+2024-09-02 10:15:48.787 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Register (task-19-8)'
+2024-09-02 10:15:48.788 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/register - 200 null application/json; charset=utf-8 29.1191ms
+2024-09-02 10:16:15.244 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundarytzGXbq6gocN0M5Kb 346
+2024-09-02 10:16:15.245 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:16:15.245 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:16:15.264 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:16:15.275 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__model_Username_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__model_Username_0
+2024-09-02 10:29:50.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:29:50.977 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:29:50.991 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:29:50.991 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:29:51.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:29:51.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 211.671ms
+2024-09-02 10:29:51.190 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:29:51.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.8181ms
+2024-09-02 10:29:51.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.6622ms
+2024-09-02 10:29:51.262 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:29:51.354 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.8564ms
+2024-09-02 10:30:16.401 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundarykqBS0bMygKBA35y8 346
+2024-09-02 10:30:16.411 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:30:16.416 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:30:16.428 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:30:36.820 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:30:36.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:30:36.860 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:30:36.861 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:30:37.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:30:37.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:30:37.088 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 253.2998ms
+2024-09-02 10:30:37.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.669ms
+2024-09-02 10:30:37.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.715ms
+2024-09-02 10:30:37.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:30:37.269 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.09ms
+2024-09-02 10:30:54.849 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundary5MPiPZ7iMBPoPJBK 346
+2024-09-02 10:30:54.854 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:30:54.860 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:30:54.870 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:31:18.541 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:31:18.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:31:18.569 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:31:18.569 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:31:18.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 180.9298ms
+2024-09-02 10:31:18.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:31:18.741 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.5754ms
+2024-09-02 10:31:18.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:31:18.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.6219ms
+2024-09-02 10:31:18.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:31:18.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 110.1068ms
+2024-09-02 10:31:41.761 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundaryoLhqwdbvM99fMHwW 346
+2024-09-02 10:31:41.764 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:31:41.769 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:31:41.779 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:31:42.474 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__model_Username_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__model_Username_0
+2024-09-02 10:31:42.512 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 731.5138ms
+2024-09-02 10:31:42.513 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:31:42.514 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Cryptography.HMACSHA512..ctor(Byte[] key)
+   at task_19_8.DTO.passwordhash.VerifyPasswordHash(String password, Byte[] storedHash, Byte[] storedSalt) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\DTO\passwordhash.cs:line 22
+   at task_19_8.Controllers.UsersController.Login(UserHashDTO model) in C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\Controllers\UsersController.cs:line 176
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-02 10:31:42.575 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 500 null text/plain; charset=utf-8 813.913ms
+2024-09-02 10:33:48.381 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-02 10:33:48.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/index.html - null null
+2024-09-02 10:33:48.415 +03:00 [INF] Hosting environment: Development
+2024-09-02 10:33:48.415 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\web API\task-19-8\task-19-8
+2024-09-02 10:33:48.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/index.html - 200 null text/html;charset=utf-8 200.9663ms
+2024-09-02 10:33:48.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-02 10:33:48.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/_vs/browserLink - null null
+2024-09-02 10:33:48.608 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 6.2595ms
+2024-09-02 10:33:48.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.0251ms
+2024-09-02 10:33:48.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - null null
+2024-09-02 10:33:48.780 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44388/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.4434ms
+2024-09-02 10:34:20.596 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44388/api/Users/login - multipart/form-data; boundary=----WebKitFormBoundary14AMtbVMdQmys9HM 346
+2024-09-02 10:34:20.609 +03:00 [INF] CORS policy execution successful.
+2024-09-02 10:34:20.615 +03:00 [INF] Executing endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:34:20.626 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(task_19_8.DTO.UserHashDTO) on controller task_19_8.Controllers.UsersController (task-19-8).
+2024-09-02 10:34:21.585 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__model_Email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2024-09-02 10:34:21.653 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-09-02 10:34:21.658 +03:00 [INF] Executed action task_19_8.Controllers.UsersController.Login (task-19-8) in 1028.2671ms
+2024-09-02 10:34:21.658 +03:00 [INF] Executed endpoint 'task_19_8.Controllers.UsersController.Login (task-19-8)'
+2024-09-02 10:34:21.665 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44388/api/Users/login - 200 null text/plain; charset=utf-8 1069.5453ms

@@ -105,8 +105,8 @@ namespace task_19_8.Controllers
 
 
 
-        [HttpPut("update/quantity{id}")]
-        public IActionResult Update([FromForm] QuantityDTO QuDTO, int id)
+        [HttpPut("update/quantity/{id}")]
+        public IActionResult Update([FromBody] QuantityDTO QuDTO, int id)
         {
 
 
@@ -124,7 +124,7 @@ namespace task_19_8.Controllers
          
         }
 
-        [HttpDelete("delete/one")]
+        [HttpDelete("delete/one/{id}")]
         public IActionResult Delete(int id)
         {
 

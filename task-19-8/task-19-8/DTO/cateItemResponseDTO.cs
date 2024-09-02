@@ -2,7 +2,7 @@
 
 namespace task_19_8.DTO
 {
-    public class cateItemResponseDTO
+    public  class cateItemResponseDTO
     {
 
         public int CartItemId { get; set; }
