@@ -189,11 +189,11 @@ namespace task_19_8.Controllers
 
 
 
-        [HttpGet("return/info{id}")]
+        [HttpPost("return/info")]
 
-        public IActionResult ReturnInfo(int id ) {
+        public IActionResult ReturnInfo( [FromForm]  string name ) {
 
-            var user = _db.Users.Where(u => u.UserId == id).ToList();
+            var user = _db.Users.Where(u => u.Username == name).FirstOrDefault();
 
             return Ok(user);
         }
