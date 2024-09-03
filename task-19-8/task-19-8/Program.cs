@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
+using task_19_8.DTO;
 using task_19_8.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,6 +40,42 @@ builder.Host.UseSerilog();
 
 
 
+builder.Services.AddSingleton<TokenGenerator>(); //1
+
+var jwtSettings = builder.Configuration.GetSection("Jwt"); // 2
+var key = jwtSettings.GetValue<string>("Key");
+var issuer = jwtSettings.GetValue<string>("Issuer");
+var audience = jwtSettings.GetValue<string>("Audience");
+
+if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(issuer) || string.IsNullOrEmpty(audience)) // 3
+{
+    throw new InvalidOperationException("JWT settings are not properly configured.");
+}
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme) // 4
+    .AddJwtBearer(options =>
+    {
+        var jwtSettings = builder.Configuration.GetSection("Jwt");
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidAudience = jwtSettings["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]))
+        };
+    });
+
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Admin", policy => policy.RequireRole("Admin")); // 5
+});
+
+
+
 var app = builder.Build();
 app.UseCors("Development"); /// new for conect
 
@@ -50,8 +90,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication(); // new
+app.UseAuthorization();  // new
+
+
 
 app.MapControllers();
-
 app.Run();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using task_19_8.DTO;
 using task_19_8.Models;
 
@@ -12,13 +13,15 @@ namespace task_19_8.Controllers
 
         private MyDbContext _db;
         private readonly ILogger<UsersController> _logger;
+        private readonly TokenGenerator _tokenGenerator;
 
-        public UsersController(MyDbContext db, ILogger<UsersController> logger)
+        public UsersController(MyDbContext db, ILogger<UsersController> logger, TokenGenerator tokenGenerator)
         {
 
             _db = db;
             _logger = logger;
-        }
+            _tokenGenerator = tokenGenerator;
+    }
 
         /// //////////////////////
         ///   </task 2>
@@ -176,15 +179,19 @@ namespace task_19_8.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromForm] UserHashDTO model)
+        public IActionResult Login([FromForm] LoginDTO model)
         {
-            var user = _db.Users.FirstOrDefault(x => x.Email == model.Email);
+            var user = _db.Users.FirstOrDefault(x => x.Username == model.Username);
             if (user == null || !passwordhash.VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
             {
                 return Unauthorized("Invalid username or password.");
             }
-            // Generate a token or return a success response
-            return Ok("User logged in successfully");
+
+            var roles = _db.UserRoles.Where(x => x.UserId == user.UserId).Select(ur => ur.Role).ToList();
+
+            var token = _tokenGenerator.GenerateToken(user.Username, roles);
+
+            return Ok(new { Token = token , UserId1 = user.UserId});
         }
 
 
@@ -198,6 +205,32 @@ namespace task_19_8.Controllers
             return Ok(user);
         }
 
+        //////////
+        ///   test proplem solving 
+
+//     [HttpPost("FindSingleRepetition")]
+//public IActionResult FindSingleRepetition([FromBody] num dto)
+//{
+//    if (dto.Numbers == null || dto.Numbers.Length != 5)
+//    {
+//        return BadRequest("Please provide exactly 5 numbers.");
+//    }
+
+//    var singleRepetitions = dto.Numbers.GroupBy(n => n)
+//        .Where(g => g.Count()%2 != 0)
+//        .Select(g => g.Key).ToList();
+
+//    if (!singleRepetitions.Any())
+//    {
+//        return NotFound("No single repetition found.");
+//    }
+
+//    return Ok(singleRepetitions);
+//    }
+
+
+        //////////////////////
+        ///
 
     }
 }

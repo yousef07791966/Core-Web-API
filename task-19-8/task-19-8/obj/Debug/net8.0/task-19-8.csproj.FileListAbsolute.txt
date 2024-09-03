@@ -144,3 +144,4 @@ C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\refint\task
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\task-19-8.pdb
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\task-19-8.genruntimeconfig.cache
 C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\obj\Debug\net8.0\ref\task-19-8.dll
+C:\Users\Orange\Desktop\web API\task-19-8\task-19-8\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

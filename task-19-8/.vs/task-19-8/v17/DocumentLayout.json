@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\onclickdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\onclickdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\dto\\userhashdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|c:\\users\\orange\\desktop\\web api\\task-19-8\\task-19-8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A5B0EF0F-BA1B-4824-A2E2-80B865B9828F}|task-19-8\\task-19-8.csproj|solutionrelative:task-19-8\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "task-19-8\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Controllers\\UsersController.cs",
               "RelativeToolTip": "task-19-8\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAALwAAAAAAAAAAAAAAMgAAAAAAAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAswLYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T20:46:21.764Z",
               "IsPinned": true,
@@ -52,53 +72,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OnclickDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\OnclickDTO.cs",
-              "RelativeDocumentMoniker": "task-19-8\\DTO\\OnclickDTO.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\OnclickDTO.cs",
-              "RelativeToolTip": "task-19-8\\DTO\\OnclickDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAuAAAA",
+              "DocumentIndex": 4,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "task-19-8\\DTO\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "task-19-8\\DTO\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T16:17:15.214Z",
+              "WhenOpened": "2024-09-03T13:23:51.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "task-19-8\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "task-19-8\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAABMBAAAAAAAAAAAUwCEBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:23:27.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Models\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "task-19-8\\Models\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Models\\MyDbContext.cs",
+              "RelativeToolTip": "task-19-8\\Models\\MyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:05:42.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\TokenGenerator.cs",
+              "RelativeDocumentMoniker": "task-19-8\\DTO\\TokenGenerator.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\TokenGenerator.cs",
+              "RelativeToolTip": "task-19-8\\DTO\\TokenGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:42:03.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Program.cs",
+              "RelativeDocumentMoniker": "task-19-8\\Program.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Program.cs",
+              "RelativeToolTip": "task-19-8\\Program.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAewB4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T07:28:30.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Models\\User.cs",
               "RelativeDocumentMoniker": "task-19-8\\Models\\User.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\Models\\User.cs",
               "RelativeToolTip": "task-19-8\\Models\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-01T11:47:50.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserHashDTO.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\UserHashDTO.cs",
               "RelativeDocumentMoniker": "task-19-8\\DTO\\UserHashDTO.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\UserHashDTO.cs",
               "RelativeToolTip": "task-19-8\\DTO\\UserHashDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T08:18:09.959Z"
+              "WhenOpened": "2024-09-01T08:18:09.959Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\appsettings.json",
+              "RelativeDocumentMoniker": "task-19-8\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\appsettings.json",
+              "RelativeToolTip": "task-19-8\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T07:26:54.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "passwordhash.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
               "RelativeDocumentMoniker": "task-19-8\\DTO\\passwordhash.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\task-19-8\\task-19-8\\DTO\\passwordhash.cs",
               "RelativeToolTip": "task-19-8\\DTO\\passwordhash.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T11:31:18.466Z"
+              "WhenOpened": "2024-09-01T11:31:18.466Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,7 @@ namespace task_19_8.Controllers
 
 
         [HttpGet]
-
+        [Authorize]
         public IActionResult Get()
         {
             var cart = _db.Products.ToList();
@@ -31,7 +32,7 @@ namespace task_19_8.Controllers
         }
 
         [HttpGet("ProductId")]
-
+        [Authorize]
         public IActionResult Get(int ProductId)
         {
             var data = _db.Products.Where(c => c.ProductId == ProductId).ToList();
@@ -276,9 +277,10 @@ namespace task_19_8.Controllers
         //    return Ok(data);
         //}
 
-        [HttpGet]
-        [Route("  category {id}")]
 
+        [Authorize]
+        [HttpGet]
+        [Route("category{id}")]
         public IActionResult GetAll(int id)
         {
             var data = _db.Products.Where(c => c.CategoryId == id).ToList();
